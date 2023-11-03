@@ -34,6 +34,16 @@ const quizData = [
     
 
 ];
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+  
+  shuffleArray(quizData);
+
 let index = 0;
 let correct = 0,
 incorrect = 0,
